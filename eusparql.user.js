@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         SPARQL
 // @namespace    lbsprql
-// @version      0.2
+// @version      0.3
 // @description  Enhances http://publications.europa.eu/webapi/rdf/sparql with CODEMIRROR (http://codemirror.net/2/)
 // @author       Ladislav Behal
 // @require      http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js
