@@ -76,7 +76,7 @@ CodeMirror.commands["selectAll"](myCodeMirror);
 $1('.CodeMirror').css("border","1px solid #eee");
 
 var form = $1("#main > form > fieldset > label:nth-child(6)");
-$1("#main > form > fieldset > label:nth-child(6)").append(" ");
+$1("#main > form > fieldset > label:nth-child(6)").append(" Ctrl+Space for code completion");
 var button = $1("<button type=\"button\">Reformat</button>");
 button.click(function()
 {
