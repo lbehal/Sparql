@@ -5,13 +5,13 @@
 // @description  Enhances http://publications.europa.eu/webapi/rdf/sparql with CODEMIRROR (http://codemirror.net/2/)
 // @author       Ladislav Behal
 // @require      http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js
-// @require      https://raw.githubusercontent.com/codemirror/CodeMirror/master/lib/codemirror.js
-// @require      https://raw.githubusercontent.com/lbehal/Sparql/master/codemirror-compressed.js
+// @require      https://raw.githubusercontent.com/lbehal/Sparql/master/codemirror.js
 // @require      http://codemirror.net/2/lib/util/formatting.js
 // @require      http://codemirror.net/2/lib/util/foldcode.js
 // @require      https://raw.githubusercontent.com/codemirror/CodeMirror/master/addon/hint/show-hint.js
+// @require      https://raw.githubusercontent.com/lbehal/Sparql/master/codemirror-compressed.js
 // @match        http://publications.europa.eu/webapi/rdf/sparql
-// @resource     codemirror_CSS https://raw.githubusercontent.com/codemirror/CodeMirror/master/lib/codemirror.css
+// @resource     codemirror_CSS https://raw.githubusercontent.com/lbehal/Sparql/master/codemirror.css
 // @resource     atjs_CSS https://raw.githubusercontent.com/codemirror/CodeMirror/master/addon/hint/show-hint.css
 // @grant        GM_addStyle
 // @grant        GM_getResourceText
