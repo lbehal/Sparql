@@ -91,8 +91,7 @@ String.prototype.insert = function (index, string) {
       var stream = new CodeMirror.StringStream(text[i], tabSize);
       while (!stream.eol()) {
         var inner = CodeMirror.innerMode(outer, state);
-        var style = outer.token(stream, state), cur = stream.current();
-        console.log(cur);
+        var style = outer.token(stream, state), cur = stream.current();        
         stream.start = stream.pos;
         if (!atSol || /\S/.test(cur)) {
           var indx = cur.indexOf('{');
@@ -113,7 +112,10 @@ String.prototype.insert = function (index, string) {
       if (!stream.pos && outer.blankLine) outer.blankLine(state);
       if (!atSol) newline();
     }
-
+    
+    console.log("final text");
+    console.log(out);
+    
     cm.operation(function () {
       cm.replaceRange(out, from, to);
       for (var cur = from.line + 1, end = from.line + lines; cur <= end; ++cur)
