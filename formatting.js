@@ -1,3 +1,10 @@
+String.prototype.insert = function (index, string) {
+  if (index > 0)
+    return this.substring(0, index) + string + this.substring(index, this.length);
+  else
+    return string + this;
+};
+
 (function() {
 
   CodeMirror.extendMode("css", {
@@ -87,14 +94,18 @@
         var style = outer.token(stream, state), cur = stream.current();
         stream.start = stream.pos;
         if (!atSol || /\S/.test(cur)) {
+          var indx = cur.indexOf('{');
+          if(indx > -1)
+          {
+            cur.insert(indx, "\n");
+            ++lines;
+          }
           out += cur;
           atSol = false;
         }
         if (!atSol && inner.mode.newlineAfterToken &&
             inner.mode.newlineAfterToken(style, cur, stream.string.slice(stream.pos) || text[i+1] || "", inner.state))
-          newline();
-        else if(/^[{]$/.test(cur))
-          newline();
+          newline();   
       }
       if (!stream.pos && outer.blankLine) outer.blankLine(state);
       if (!atSol) newline();
