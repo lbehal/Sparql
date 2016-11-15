@@ -93,7 +93,7 @@
         if (!atSol && inner.mode.newlineAfterToken &&
             inner.mode.newlineAfterToken(style, cur, stream.string.slice(stream.pos) || text[i+1] || "", inner.state))
           newline();
-        else if(!atSol && /^[{]$/.test(cur))
+        else if(/^[{]$/.test(cur))
           newline();
       }
       if (!stream.pos && outer.blankLine) outer.blankLine(state);
