@@ -92,6 +92,7 @@ String.prototype.insert = function (index, string) {
       while (!stream.eol()) {
         var inner = CodeMirror.innerMode(outer, state);
         var style = outer.token(stream, state), cur = stream.current();
+        console.log(cur);
         stream.start = stream.pos;
         if (!atSol || /\S/.test(cur)) {
           var indx = cur.indexOf('{');
@@ -99,6 +100,8 @@ String.prototype.insert = function (index, string) {
           {
             cur.insert(indx, "\n");
             ++lines;
+            console.log("adding");
+            console.log(cur);
           }
           out += cur;
           atSol = false;
