@@ -6,7 +6,7 @@
 // @author       Ladislav Behal
 // @require      http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js
 // @require      https://raw.githubusercontent.com/lbehal/Sparql/master/codemirror.js
-// @require      http://codemirror.net/2/lib/util/formatting.js
+// @require      https://raw.githubusercontent.com/lbehal/Sparql/master/formatting.js
 // @require      http://codemirror.net/2/lib/util/foldcode.js
 // @require      https://raw.githubusercontent.com/codemirror/CodeMirror/master/addon/hint/show-hint.js
 // @require      https://raw.githubusercontent.com/lbehal/Sparql/master/codemirror-compressed.js
