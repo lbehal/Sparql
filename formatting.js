@@ -86,6 +86,23 @@ String.prototype.insert = function (index, string) {
       atSol = true;
       ++lines;
     }
+    
+    function indentChar(character, cur, textafter)
+      {
+         
+      var indx = cur.indexOf(character);
+          if(indx > -1)
+          {  debugger;
+            cur = cur.insert(indx, "\n");
+            ++lines;
+            if(!/^\r\n/.test(textafter) && textafter != "")
+              {
+                 cur = cur.insert(indx+2, "\n");
+                  ++lines;
+              }    
+          }
+          return cur;
+      }
 
     for (var i = 0; i < text.length; ++i) {
       var stream = new CodeMirror.StringStream(text[i], tabSize);
@@ -94,13 +111,12 @@ String.prototype.insert = function (index, string) {
         var style = outer.token(stream, state), cur = stream.current();        
         stream.start = stream.pos;
         if (!atSol || /\S/.test(cur)) {
-          var indx = cur.indexOf('{');
-          if(indx > -1)
+          
+            var textafter = (stream.string.slice(stream.pos) || "");
+          if(text[i].length > 1)
           {
-            cur.insert(indx, "\n");
-            ++lines;
-            console.log("adding");
-            console.log(cur);
+          cur = indentChar('{', cur, textafter);
+          cur = indentChar('}', cur, textafter);
           }
           out += cur;
           atSol = false;
@@ -117,6 +133,7 @@ String.prototype.insert = function (index, string) {
     console.log(out);
     
     cm.operation(function () {
+      
       cm.replaceRange(out, from, to);
       for (var cur = from.line + 1, end = from.line + lines; cur <= end; ++cur)
         cm.indentLine(cur, "smart");
