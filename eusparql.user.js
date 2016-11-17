@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         SPARQL
 // @namespace    lbsprql
-// @version      0.5
+// @version      0.6
 // @description  Enhances http://publications.europa.eu/webapi/rdf/sparql with CODEMIRROR (http://codemirror.net/2/)
 // @author       Ladislav Behal
 // @require      http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js
@@ -74,6 +74,7 @@ var myCodeMirror = CodeMirror.fromTextArea(myTextArea.get(0),  {
   hintOptions: {hint: synonyms}
 });
 CodeMirror.commands["selectAll"](myCodeMirror);
+myCodeMirror.autoFormatRange({line:0, ch:0}, {line:myCodeMirror.lineCount(), ch:myCodeMirror.getTextArea().value.length});   
 
 $1('.CodeMirror').css("border","1px solid #eee");
 
