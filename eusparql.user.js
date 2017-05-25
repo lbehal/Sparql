@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         SPARQL
+// @name         SPARQLs
 // @namespace    lbsprql
-// @version      0.7
+// @version      0.8
 // @description  Enhances http://publications.europa.eu/webapi/rdf/sparql with CODEMIRROR (http://codemirror.net/2/)
 // @author       Ladislav Behal
 // @require      http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js
@@ -30,7 +30,7 @@
 
 	var myTextArea = $("#query");
 	var foldFunc = CodeMirror.newFoldFunction(CodeMirror.braceRangeFinder);
-	
+
 	function synonyms(cm, option) {
 		return new Promise(function(accept) {
 			setTimeout(function() {
