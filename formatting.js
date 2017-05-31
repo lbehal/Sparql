@@ -91,7 +91,7 @@ String.prototype.insert = function (index, string) {
       {
          
       var indx = cur.indexOf(character);
-          if(indx > -1 && !(indx == 0 textafter == ""))
+          if(indx > -1 && !(indx == 0 && textafter == ""))
           {  debugger;
             cur = cur.insert(indx, "\n");
             ++lines;
