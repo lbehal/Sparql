@@ -1,16 +1,16 @@
 // ==UserScript==
 // @name         SPARQLs
 // @namespace    lbsprql
-// @version      0.9
+// @version      0.10
 // @description  Enhances http://publications.europa.eu/webapi/rdf/sparql with CODEMIRROR (http://codemirror.net/2/)
 // @author       Ladislav Behal
 // @require      http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js
-// @require      https://raw.githubusercontent.com/lbehal/Sparql/master/codemirror.js
-// @require      https://raw.githubusercontent.com/lbehal/Sparql/master/formatting.js
+// @require      https://rawgit.com/lbehal/Sparql/master/codemirror.js
+// @require      https://rawgit.com/lbehal/Sparql/master/formatting.js
 // @require      http://codemirror.net/2/lib/util/foldcode.js
-// @require      https://raw.githubusercontent.com/codemirror/CodeMirror/master/addon/hint/show-hint.js
-// @require      https://raw.githubusercontent.com/lbehal/Sparql/master/codemirror-compressed.js
-// @require      https://raw.githubusercontent.com/codemirror/CodeMirror/master/addon/edit/matchbrackets.js
+// @require      https://rawgit.com/codemirror/CodeMirror/master/addon/hint/show-hint.js
+// @require      https://rawgit.com/lbehal/Sparql/master/codemirror-compressed.js
+// @require      https://rawgit.com/codemirror/CodeMirror/master/addon/edit/matchbrackets.js
 // @match        http://publications.europa.eu/webapi/rdf/sparql
 // @resource     codemirror_CSS https://raw.githubusercontent.com/lbehal/Sparql/master/codemirror.css
 // @resource     atjs_CSS https://raw.githubusercontent.com/codemirror/CodeMirror/master/addon/hint/show-hint.css
